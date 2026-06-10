@@ -1,0 +1,20 @@
+{
+  "name": "linkedin-personal-branding",
+  "description": "Review a LinkedIn profile with the user's own logged-in browser and build an evidence-backed personal branding blueprint: authority scores, findings, a full profile rewrite, three lead magnets, and a 60-day content plan.",
+  "version": "0.1.0",
+  "author": {
+    "name": "William Flanagan",
+    "email": "wflanagan@audienti.com"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/audienti/linkedin-personal-branding",
+  "repository": "https://github.com/audienti/linkedin-personal-branding",
+  "keywords": [
+    "linkedin",
+    "personal-branding",
+    "profile-review",
+    "content-plan",
+    "lead-magnets",
+    "authority-blueprint"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "linkedin-personal-branding",
+  "version": "0.1.0",
+  "description": "Review a LinkedIn profile with the user's own logged-in browser and build an evidence-backed personal branding blueprint: authority scores, findings, a full profile rewrite, three lead magnets, and a 60-day content plan.",
+  "author": {
+    "name": "William Flanagan",
+    "email": "wflanagan@audienti.com"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/audienti/linkedin-personal-branding",
+  "repository": "https://github.com/audienti/linkedin-personal-branding",
+  "keywords": [
+    "linkedin",
+    "personal-branding",
+    "profile-review",
+    "content-plan",
+    "lead-magnets",
+    "authority-blueprint"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LinkedIn Personal Branding",
+    "shortDescription": "Turn your LinkedIn profile into an authority blueprint with a 60-day content plan.",
+    "longDescription": "Collects your LinkedIn profile, recent posts, and comments through your own logged-in browser (no third-party scraping APIs), computes deterministic activity metrics, scores your profile against a five-dimension authority rubric, then generates a complete personal branding kit: findings, strategy, a full profile rewrite with three headline variants, three lead magnet concepts, and a 60-day content plan with ready-to-paste posts.",
+    "developerName": "William Flanagan",
+    "category": "Marketing",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Review my LinkedIn profile and build my personal branding blueprint.",
+      "Run a LinkedIn personal branding review for this profile URL.",
+      "Build my 60-day LinkedIn content plan from my profile and recent posts."
+    ],
+    "brandColor": "#0A66C2"
+  }
+}

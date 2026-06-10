@@ -1,0 +1,110 @@
+{
+  "collected_at": "2026-06-10T15:30:00-05:00",
+  "analysis_window_days": 90,
+  "linkedin_url": "https://www.linkedin.com/in/jane-operator/",
+  "username": "jane-operator",
+  "profile": {
+    "name": "Jane Operator",
+    "headline": "Helping B2B founders turn LinkedIn into pipeline | Founder @ PipelineCraft",
+    "about": "Most founders post into the void.\n\nI spent 6 years running outbound for two agencies before realizing the founders winning deals weren't cold-calling — they were posting.\n\nPipelineCraft is the system I built from that: 47 founders, $2.1M in attributed pipeline.\n\nDM me 'SYSTEM' if you want the playbook.",
+    "location": "Austin, Texas, United States",
+    "company": "PipelineCraft",
+    "job_title": "Founder",
+    "connections": 8400,
+    "followers": 12100,
+    "profile_photo": "https://media.licdn.com/dms/image/example-photo.jpg",
+    "banner_image": "https://media.licdn.com/dms/image/example-banner.jpg",
+    "featured_links": [
+      {"title": "Book a pipeline audit", "url": "https://pipelinecraft.example.com/audit"},
+      {"title": "The Founder Posting Playbook", "url": "https://pipelinecraft.example.com/playbook"}
+    ],
+    "experience": [
+      {
+        "title": "Founder",
+        "company": "PipelineCraft",
+        "date_range": "Jan 2023 - Present · 3 yrs 6 mos",
+        "description": "Built a LinkedIn-led growth system used by 47 B2B founders. $2.1M attributed pipeline in 2025."
+      },
+      {
+        "title": "Head of Outbound",
+        "company": "GrowthAgency Co",
+        "date_range": "2019 - 2022 · 3 yrs",
+        "description": null
+      }
+    ],
+    "website_url": "https://pipelinecraft.example.com",
+    "warnings": []
+  },
+  "posts": [
+    {
+      "urn": "urn:li:activity:7331234567890123456",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7331234567890123456/",
+      "kind": "post",
+      "occurred_at": "2026-06-03T14:05:00Z",
+      "relative_time": "1w",
+      "author_name": "Jane Operator",
+      "is_repost": false,
+      "text": "Your SDRs aren't the problem. Your founder's invisibility is.\n\nWe audited 31 B2B pipelines last quarter. The pattern: companies whose founders post 3x/week sourced 41% of pipeline from LinkedIn. The rest? 6%.\n\nThree things the visible founders do differently:\n1. They pick one enemy and attack it weekly\n2. They publish proof, not platitudes\n3. They end every post with one specific ask\n\nWhich one is your founder missing? 👇",
+      "link_urls": [],
+      "reaction_count": 218,
+      "comment_count": 47,
+      "share_count": 12
+    },
+    {
+      "urn": "urn:li:activity:7330123456789012345",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7330123456789012345/",
+      "kind": "post",
+      "occurred_at": "2026-05-28T13:10:00Z",
+      "relative_time": "2w",
+      "author_name": "Jane Operator",
+      "is_repost": false,
+      "text": "How we took a founder from 0 to 14 booked calls in 60 days (without ads):\n\nWeek 1-2: rewrote the profile around one ICP.\nWeek 3-4: published 2 case stories with real numbers.\nWeek 5-8: daily comment strategy on 20 target accounts.\n\nResult: 14 calls, 5 opportunities, 2 closed at $18k each.\n\nWant the exact checklist? Comment 'CHECKLIST' and I'll DM it.",
+      "link_urls": ["https://pipelinecraft.example.com/case-study"],
+      "reaction_count": 164,
+      "comment_count": 89,
+      "share_count": 7
+    }
+  ],
+  "comments": [
+    {
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329876543210987654/",
+      "occurred_at": "2026-06-05T16:42:00Z",
+      "relative_time": "5d",
+      "text": "The miss here is treating LinkedIn as a channel instead of a trust engine. We see reply rates double when the founder has posted proof that week.",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329876543210987654/",
+      "post_author": "Sam Marketer"
+    }
+  ],
+  "website": {
+    "url": "https://pipelinecraft.example.com",
+    "markdown_excerpt": "# Turn your founder's LinkedIn into a pipeline engine\n\nPipelineCraft installs a posting + outbound system for B2B founders. 47 founders served. $2.1M attributed pipeline in 2025.\n\n- Book a pipeline audit\n- Download the Founder Posting Playbook",
+    "links": [
+      {"url": "https://pipelinecraft.example.com/audit", "label": "Book a pipeline audit"},
+      {"url": "https://pipelinecraft.example.com/playbook", "label": "Download the Playbook"}
+    ],
+    "booking_links": [
+      {"url": "https://pipelinecraft.example.com/audit", "label": "Book a pipeline audit"}
+    ],
+    "resource_links": [
+      {"url": "https://pipelinecraft.example.com/playbook", "label": "Download the Playbook"}
+    ],
+    "proof_snippets": [
+      "47 founders served. $2.1M attributed pipeline in 2025."
+    ]
+  },
+  "target_icp": {
+    "description": "Bootstrapped B2B SaaS founders, 5-50 employees, selling $10k-$50k ACV deals, currently dependent on referrals and founder-led sales.",
+    "top_jobs": ["create repeatable pipeline", "reduce dependence on referrals"],
+    "areas_of_responsibility": ["revenue", "positioning", "founder brand"]
+  },
+  "collection_notes": {
+    "method": "browser",
+    "scroll_rounds_posts": 6,
+    "scroll_rounds_comments": 4,
+    "posts_truncated": false,
+    "comments_truncated": false,
+    "oldest_post_at": "2026-03-14T09:00:00Z",
+    "oldest_comment_at": "2026-03-20T11:00:00Z",
+    "manual_fields": []
+  }
+}

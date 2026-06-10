@@ -1,0 +1,873 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "linkedin_personal_branding_blueprint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "meta",
+    "offer",
+    "observed_profile",
+    "scores",
+    "findings",
+    "activity_review",
+    "strategy",
+    "rewrite",
+    "weekly_artifacts",
+    "content_plan"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "linkedin_url",
+        "username",
+        "generated_at",
+        "analysis_window_days",
+        "post_count",
+        "comment_count",
+        "icp_provided"
+      ],
+      "properties": {
+        "linkedin_url": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "analysis_window_days": {
+          "type": "number"
+        },
+        "post_count": {
+          "type": "number"
+        },
+        "comment_count": {
+          "type": "number"
+        },
+        "icp_provided": {
+          "type": "boolean"
+        }
+      }
+    },
+    "offer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "primary_url",
+        "cta_keyword",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "primary_url": {
+          "type": "string"
+        },
+        "cta_keyword": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "observed_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "company": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "headline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bio": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "job_title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "connections": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "followers": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "profile_photo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "banner_image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "featured_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/featured_link"
+          }
+        },
+        "recent_posts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recent_post"
+          }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authority_score",
+        "dimensions",
+        "summary"
+      ],
+      "properties": {
+        "authority_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dimensions": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/score_dimension"
+          }
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "whats_working",
+        "revenue_leaks",
+        "bottom_line"
+      ],
+      "properties": {
+        "whats_working": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding_item"
+          }
+        },
+        "revenue_leaks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding_item"
+          }
+        },
+        "bottom_line": {
+          "type": "string"
+        }
+      }
+    },
+    "activity_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "post_classification",
+        "themes",
+        "tone_patterns",
+        "hook_patterns",
+        "proof_patterns",
+        "whats_working_summary",
+        "posting_guidance"
+      ],
+      "properties": {
+        "post_classification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "archetype_distribution",
+            "primary_goal_distribution",
+            "cta_distribution"
+          ],
+          "properties": {
+            "archetype_distribution": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/distribution_entry"
+              }
+            },
+            "primary_goal_distribution": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/distribution_entry"
+              }
+            },
+            "cta_distribution": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/distribution_entry"
+              }
+            }
+          }
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pattern_entry"
+          }
+        },
+        "tone_patterns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pattern_entry"
+          }
+        },
+        "hook_patterns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pattern_entry"
+          }
+        },
+        "proof_patterns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pattern_entry"
+          }
+        },
+        "whats_working_summary": {
+          "type": "string"
+        },
+        "posting_guidance": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "strategy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "buyer_persona",
+        "strategic_gap",
+        "strategic_opportunity",
+        "fit_score",
+        "fit_assessment",
+        "next_steps"
+      ],
+      "properties": {
+        "buyer_persona": {
+          "type": "string"
+        },
+        "strategic_gap": {
+          "type": "string"
+        },
+        "strategic_opportunity": {
+          "type": "string"
+        },
+        "fit_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fit_assessment": {
+          "type": "string"
+        },
+        "next_steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rewrite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headlines",
+        "recommended_style",
+        "recommended_headline",
+        "recommended_reason",
+        "recommended_bio",
+        "profile_analysis",
+        "profile_rewrite",
+        "voice_style_guide",
+        "improvement_suggestions"
+      ],
+      "properties": {
+        "headlines": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/headline"
+          }
+        },
+        "recommended_style": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "recommended_headline": {
+          "type": "string"
+        },
+        "recommended_reason": {
+          "type": "string"
+        },
+        "recommended_bio": {
+          "type": "string"
+        },
+        "profile_analysis": {
+          "type": "string"
+        },
+        "profile_rewrite": {
+          "type": "string"
+        },
+        "voice_style_guide": {
+          "$ref": "#/$defs/voice_style_guide"
+        },
+        "improvement_suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "weekly_artifacts": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/weekly_artifact"
+      }
+    },
+    "content_plan": {
+      "type": "array",
+      "minItems": 60,
+      "maxItems": 60,
+      "items": {
+        "$ref": "#/$defs/content_plan_row"
+      }
+    }
+  },
+  "$defs": {
+    "featured_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "url"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "recent_post": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "date",
+        "text"
+      ],
+      "properties": {
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "theme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cta_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "proof_markers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "score_dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "score",
+        "confidence",
+        "evidence",
+        "subscores"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "enum": [
+            "profile_optimization",
+            "content_presence",
+            "outbound_systems",
+            "inbound_infrastructure",
+            "social_proof"
+          ]
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subscores": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/subscore"
+          }
+        }
+      }
+    },
+    "subscore": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "score"
+      ],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    },
+    "finding_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tag",
+        "title",
+        "description"
+      ],
+      "properties": {
+        "tag": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "distribution_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "count",
+        "percentage"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        },
+        "percentage": {
+          "type": "number"
+        }
+      }
+    },
+    "pattern_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "evidence_count",
+        "summary"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "evidence_count": {
+          "type": "number"
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "headline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "style",
+        "label",
+        "text"
+      ],
+      "properties": {
+        "style": {
+          "type": "string",
+          "enum": [
+            "outcome",
+            "authority",
+            "hybrid"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "voice_style_guide": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tone",
+        "structure_habits",
+        "cta_habits",
+        "proof_usage",
+        "avoid"
+      ],
+      "properties": {
+        "tone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "structure_habits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cta_habits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proof_usage": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "content_plan_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "day_number",
+        "week_number",
+        "title",
+        "archetype",
+        "primary_goal",
+        "target_persona",
+        "post_content",
+        "first_sentence",
+        "cta_type",
+        "proof_required",
+        "review_status",
+        "post_ready",
+        "items_to_verify",
+        "to_fix",
+        "action_items",
+        "finalized_content",
+        "artifact_week",
+        "artifact_role"
+      ],
+      "properties": {
+        "day_number": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "week_number": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "title": {
+          "type": "string"
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "tactical_blueprint",
+            "contrarian_pov",
+            "results_case_study",
+            "diagnostic_framework",
+            "resource_guide",
+            "audience_activation",
+            "founder_story",
+            "feature_announcement",
+            "community_milestone"
+          ]
+        },
+        "primary_goal": {
+          "type": "string",
+          "enum": [
+            "awareness",
+            "category_education",
+            "authority",
+            "proof",
+            "engagement",
+            "lead_gen",
+            "product_education",
+            "conversion"
+          ]
+        },
+        "target_persona": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "post_content": {
+          "type": "string"
+        },
+        "first_sentence": {
+          "type": "string"
+        },
+        "cta_type": {
+          "type": "string",
+          "enum": [
+            "comment_keyword",
+            "comment_prompt",
+            "dm_me",
+            "visit_link",
+            "follow_for_more",
+            "repost",
+            "soft_reflection"
+          ]
+        },
+        "proof_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "ready",
+            "needs_review",
+            "needs_revision"
+          ]
+        },
+        "post_ready": {
+          "type": "boolean"
+        },
+        "items_to_verify": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "to_fix": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "action_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "finalized_content": {
+          "type": "string"
+        },
+        "artifact_week": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 8
+        },
+        "artifact_role": {
+          "type": "string",
+          "enum": [
+            "tease",
+            "drop",
+            "application",
+            "objection",
+            "proof",
+            "operator",
+            "activation",
+            "recap",
+            "none"
+          ]
+        }
+      }
+    },
+    "weekly_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "week",
+        "slug",
+        "title",
+        "artifact_type",
+        "file",
+        "summary",
+        "offer_bridge",
+        "drop_day",
+        "cta_keyword"
+      ],
+      "properties": {
+        "week": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "slug": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "artifact_type": {
+          "type": "string",
+          "enum": [
+            "Guide",
+            "Template",
+            "Checklist",
+            "Calculator",
+            "Audit",
+            "Framework",
+            "Teardown",
+            "Worksheet",
+            "Playbook",
+            "Swipe File"
+          ]
+        },
+        "file": {
+          "type": "string",
+          "description": "relative path under the output dir, e.g. artifacts/week-1-the-signal-bar.md"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "offer_bridge": {
+          "type": "string"
+        },
+        "drop_day": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 56
+        },
+        "cta_keyword": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
